@@ -15,6 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .get("https://book-store-crud.vercel.app/books")
       .then((response) => {
